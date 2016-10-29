@@ -45,9 +45,12 @@
       </div>
       <div class="row center">
         <h2>A classic Mario Party board editor</h2>
-        <a href="http://PartyPlanner64.github.io/PartyPlanner64">
+        <div class="screenshot-wrapper">
+          <img alt="Browser chrome" src="img/browserchrome.png" class="screenshot" />
           <img alt="PartyPlanner64 screenshot" src="img/screenshot.png" class="screenshot" />
-        </a>
+          <iframe id="promoVid" class="promoVid" width="100%" height="100%" src="https://www.youtube.com/embed/_PyhmEdD7oc" frameborder="0" allowfullscreen></iframe>
+          <div class="screenshot-overlay"></div>
+        </div>
         <h5 class="button button-editor" style="cursor: default;">Coming soon!</h5>
 <!--
         <a class="button button-editor" href="http://PartyPlanner64.github.io/PartyPlanner64">Start creating</a>
@@ -82,5 +85,23 @@
         <span class="disclaim">PartyPlanner64 is not affiliated with Nintendo or Hudson. Mario Party is a registered trademark of Nintendo.</span>
       </div>
     </div>
+
+    <script type="text/javascript">
+      // Hide images and switch to promo video.
+      var overlay = document.querySelector(".screenshot-overlay");
+      overlay.addEventListener("click", function() {
+        var video = document.getElementById("promoVid");
+        video.style.display = "block";
+        video.src += "?autoplay=1"
+
+        // Hide images
+        var images = [].slice.call(overlay.parentElement.querySelectorAll(".screenshot"));
+        images.map(function(img) {
+          img.style.visibility = "hidden";
+        });
+
+        overlay.style.display = "none";
+      });
+    </script>
   </body>
 </html>
