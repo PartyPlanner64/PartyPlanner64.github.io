@@ -104,6 +104,10 @@ a {
   margin-bottom: 30px;
 }
 
+.bigger-details {
+  font-size: 120%;
+}
+
 .disclaim-row {
   margin-top: 35px;
 }
