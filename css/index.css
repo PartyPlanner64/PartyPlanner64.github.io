@@ -32,6 +32,19 @@ a {
   margin-bottom: 0;
 }
 
+.button.button-merch {
+  overflow: hidden;
+  position: relative;
+}
+
+.merch-image {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  left: 25px;
+  top: 1px;
+}
+
 .logo {
   width: 100%;
 }
